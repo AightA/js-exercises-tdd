@@ -4,16 +4,17 @@ function removeVowels(word) {
   var result = [];
 
   characters.forEach(function(character) {
+    var characterLowerCase = character.toLowerCase ()
     if (
-      character === "a" ||
-      character === "o" ||
-      character === "i" ||
-      character === "e" ||
-      character === "u"
+      !(characterLowerCase === "a" ||
+      characterLowerCase === "o" ||
+      characterLowerCase === "i" ||
+      characterLowerCase === "e" ||
+      characterLowerCase === "u")
     ) {
       result.push(character);
     } else {
-      result.push("_");
+      result.push("");
     }
   });
 
